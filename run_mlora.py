@@ -9,7 +9,7 @@ from src.MLoRA.arguments import ModelArguments, DataTrainingArguments
 
 
 if __name__ == "__main__":
-
+    print("enter run_mlora.py")
     parser = HfArgumentParser((ModelArguments, DataTrainingArguments, Seq2SeqTrainingArguments))
 
     main(parser)
