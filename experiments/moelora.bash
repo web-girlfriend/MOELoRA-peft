@@ -27,8 +27,8 @@ deepspeed --num_gpus=4 --master_port $MASTER_PORT run_mlora.py \
     --overwrite_output_dir \
     --max_source_length $MAX_SOURCE_LENGTH \
     --max_target_length 196 \
-    --per_device_train_batch_size 1 \
-    --per_device_eval_batch_size 1 \
+    --per_device_train_batch_size 2 \
+    --per_device_eval_batch_size 2 \
     --gradient_accumulation_steps 4 \
     --max_steps ${MAX_STEPS} \
     --logging_steps 100 \
@@ -55,7 +55,7 @@ deepspeed --num_gpus=4 --master_port $MASTER_PORT run_mlora.py \
     --overwrite_output_dir \
     --max_source_length $MAX_SOURCE_LENGTH \
     --max_target_length 196 \
-    --per_device_eval_batch_size 1 \
+    --per_device_eval_batch_size 2 \
     --predict_with_generate \
     --lora_name moelora \
     --expert_num 8
