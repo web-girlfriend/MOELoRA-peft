@@ -40,7 +40,7 @@ deepspeed --num_gpus=4 --master_port $MASTER_PORT run_mlora.py \
     --lora_dropout ${lora_dropout} \
     --fp16 \
     --lora_name moelora \
-    --expert_num 2
+    --expert_num 1
 
 deepspeed --num_gpus=4 --master_port $MASTER_PORT run_mlora.py \
     --do_predict \
@@ -58,4 +58,4 @@ deepspeed --num_gpus=4 --master_port $MASTER_PORT run_mlora.py \
     --per_device_eval_batch_size 2 \
     --predict_with_generate \
     --lora_name moelora \
-    --expert_num 2
+    --expert_num 1
